@@ -18,6 +18,7 @@ cursor.execute(
 	);
 	"""
 )
+connection.commit()
 
 registros = [
 	('Fabio', 23, '44444444444', 'fabio@email.com', '1234-5678', 'Belo Horizonte', 'MG', '2014-06-09'),
