@@ -1,7 +1,7 @@
 import sqlite3
 
 # conecta ao banco de dados (cria um se ainda não existe)
-connection = sqlite3.connect('clientes.db')
+connection = sqlite3.connect('../clientes.db')
 
 # cursor: iterador que permite navegar e manipular os registros do bd
 cursor = connection.cursor()
