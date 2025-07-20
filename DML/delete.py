@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect('clientes.db')
+connection = sqlite3.connect('../clientes.db')
 cursor = connection.cursor()
 
 cursor.execute(
@@ -31,7 +31,16 @@ cursor.executemany(
 	""",
 	registros
 )
+connection.commit()
 
+
+cursor.execute(
+	"""
+	DELETE FROM clientes
+	WHERE (id=?)
+	""",
+	'2'
+)
 connection.commit()
 
 
